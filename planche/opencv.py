@@ -1,7 +1,7 @@
 import cv2
 
-src = cv2.imread('src/img_process_lower.png')
-src_2 = cv2.imread('src/img_process.png')
+src = cv2.imread('planche/src/img_process_lower.png')
+src_2 = cv2.imread('planche/src/img_process.png')
 
 dst = src.copy()
 cv2.imshow('img_color', dst)
@@ -22,14 +22,12 @@ for i in contours[1:]:
     cX = int(M['m10'] / M['m00'])
     cY = int(M['m01'] / M['m00'])
 
-    print(cX,cY)
+    print(cX, cY)
     # cv2.circle(dst, (cX, cY), 3, (255, 0, 0), 3)
     # cv2.drawContours(dst, [i], 0, (0, 0, 255), 2)
     cv2.circle(src_2, (cX, cY), 3, (255, 0, 0), 3)
     cv2.drawContours(src_2, [i], 0, (0, 0, 255), 2)
 
-    
-cv2.imshow("dst", dst)
-cv2.imshow('src_2',src_2)
+cv2.imshow('src_2', src_2)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
