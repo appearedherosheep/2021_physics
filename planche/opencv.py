@@ -1,7 +1,7 @@
 import cv2
 
-src = cv2.imread('planche/src/img_process_lower.png')
-src_2 = cv2.imread('planche/src/img_process.png')
+src = cv2.imread('planche/src/dohak.png')
+src_2 = cv2.imread('planche/src/dohak.png')
 
 dst = src.copy()
 cv2.imshow('img_color', dst)
